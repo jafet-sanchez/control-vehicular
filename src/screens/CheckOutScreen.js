@@ -1,12 +1,12 @@
 // src/screens/CheckOutScreen.js
 import React, { useState, useEffect } from 'react';
+import { TouchableOpacity } from 'react-native';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   TextInput,
-  TouchableOpacity,
   Alert,
   KeyboardAvoidingView,
   Platform,

@@ -1,11 +1,11 @@
 // src/screens/HomeScreen.js
 import React, { useState, useEffect } from 'react';
+import { TouchableOpacity } from 'react-native';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
   RefreshControl,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -119,28 +119,28 @@ const HomeScreen = ({ navigation }) => {
             title="Dentro"
             value={stats.vehiclesInside}
             color={colors.primary}
-            onPress={() => navigation.navigate('VehiclesInside')}
+            onPress={() => console.log('Vehículos dentro')}
           />
           <StatCard
             icon="enter-outline"
             title="Entradas Hoy"
             value={stats.todayEntries}
             color={colors.success}
-            onPress={() => navigation.navigate('TodayEntries')}
+            onPress={() => console.log('Entradas de hoy')}
           />
           <StatCard
             icon="exit-outline"
             title="Salidas Hoy"
             value={stats.todayExits}
             color={colors.warning}
-            onPress={() => navigation.navigate('TodayExits')}
+            onPress={() => console.log('Salidas de hoy')}
           />
           <StatCard
             icon="alert-circle-outline"
             title="Pendientes"
             value={stats.pendingInspections}
             color={colors.error}
-            onPress={() => navigation.navigate('Pending')}
+            onPress={() => console.log('Inspecciones pendientes')}
           />
         </View>
 
@@ -164,13 +164,13 @@ const HomeScreen = ({ navigation }) => {
               icon="people"
               title="Personas"
               color={colors.primary}
-              onPress={() => navigation.navigate('People')}
+              onPress={() => navigation.navigate('Personas')}
             />
             <QuickAction
               icon="document-text"
               title="Reportes"
               color={colors.info}
-              onPress={() => navigation.navigate('Reports')}
+              onPress={() => navigation.navigate('Reportes')}
             />
           </View>
         </View>
@@ -179,7 +179,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>Actividad Reciente</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Activity')}>
+            <TouchableOpacity onPress={() => console.log('Ver toda la actividad')}>
               <Text style={styles.seeAll}>Ver todo</Text>
             </TouchableOpacity>
           </View>
@@ -315,4 +315,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default HomeScreen
