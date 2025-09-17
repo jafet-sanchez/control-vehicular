@@ -353,7 +353,7 @@ const CheckOutScreen = ({ navigation }) => {
             <View style={styles.submitSection}>
               <CustomButton
                 title="Registrar Salida"
-                variant="warning"
+                variant="secondary"
                 size="large"
                 fullWidth
                 onPress={handleSubmit}
@@ -363,7 +363,7 @@ const CheckOutScreen = ({ navigation }) => {
           </>
         )}
 
-        <View style={{ height: 100 }} />
+        <View style={{ height: 150 }} />
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -578,6 +578,7 @@ const styles = StyleSheet.create({
   },
   submitSection: {
     padding: 16,
+    paddingBottom: 8,
   },
 });
 

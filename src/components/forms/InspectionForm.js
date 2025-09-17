@@ -83,7 +83,7 @@ const InspectionForm = ({
         </Text>
         <TextInput
           style={[globalStyles.input, styles.guardInput]}
-          placeholder="Nombre del vigilante"
+          placeholder="Nombre del Guarda"
           placeholderTextColor={colors.textSecondary}
           value={inspection.guarda}
           onChangeText={(text) => handleFieldChange('guarda', text)}
